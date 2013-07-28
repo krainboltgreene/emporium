@@ -8,6 +8,33 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
- *= require_tree .
+//= require bootstrap
+//= require bootstrap-responsive
+//= require chosen
+//= require font-awesome
+//= require tagmanager
+//= require bootstrap/tour
+//= require bootstrap/lightbox
+//= require bootstrap/fileupload
+//= require bootstrap/markdown
+//= require patches/bootstrap
+//= require_self
+//= require_tree .
  */
+body {
+  padding-top: 60px;
+
+  .pull-center {
+      text-align: center;
+  }
+
+  .carousel .item img {
+    width: 1170px;
+    height: 580px;
+  }
+
+  #gallery .primary img{
+    width: 100%;
+    margin: 10px 0px;
+  }
+}

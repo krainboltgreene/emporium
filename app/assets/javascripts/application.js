@@ -12,5 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require sugar
+//= require prefixfree
+//= require chosen
+//= require bootstrap
+//= require bootstrap/tour
+//= require bootstrap/lightbox
+//= require bootstrap/fileupload
+//= require bootstrap/markdown
+//= require tagmanager
 //= require_tree .
+
+$(function() {
+  $("[data-toggle=tooltip]").tooltip();
+
+  $(".chzn-select").chosen();
