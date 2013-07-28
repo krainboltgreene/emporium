@@ -48,7 +48,7 @@ gem "redis-activesupport", github: "jodosha/redis-store"
 gem "redis-rack", github: "jodosha/redis-store"
 gem "carrierwave", "~> 0.6"
 gem "omniauth", "~> 1.1"
-
+gem "tire", "~> 0.6"
 group :production, :staging do
   gem "rails_12factor", "~> 0.0.2"
 end
