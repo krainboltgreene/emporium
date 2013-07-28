@@ -1,0 +1,7 @@
+language: ruby
+rvm:
+  - 2.0.0
+
+script: "bundle exec rake db:migrate ENV=test && bundle exec rake spec"
+bundler_args: --without development production
+before_script: "./script/travis"

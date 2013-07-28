@@ -1,0 +1,8 @@
+/.foreman
+/Vendorfile
+/spec/
+/test/
+/doc/
+/.rvmrc
+/.ruby-version
+/.ruby-gemset

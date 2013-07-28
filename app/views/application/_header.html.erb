@@ -1,0 +1,16 @@
+<header>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="/">Shadowlands</a>
+      <ul class="nav">
+        <li><%= link_to "Account", "#" %></li>
+      </ul>
+      <ul class="nav pull-left">
+        <% unless account_signed_in? %>
+          <li><%= link_to "Sign Up", new_account_registration_path %></li>
+          <li><%= link_to "Sign In", new_account_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>

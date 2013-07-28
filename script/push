@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+git fetch --all &&
+git checkout master &&
+git push origin master

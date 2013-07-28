@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+script/push &&
+git tag v"$(sh -c "rails runner 'puts Emporium::Application::VERSION'" 2>&1)" &&
+git push --tags &&
+heroku pgbackups:capture --expire &&
+git push heroku master &&
+rake figaro:heroku &&
+heroku run rake db:migrate &&
+heroku ps:restart

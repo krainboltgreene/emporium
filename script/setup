@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+bundle install
+createuser emporium --createdb
+script/vagrant
+bundle exec rake db:drop db:create db:migrate db:seed
+rails generate figaro:install
+echo -e "Your config/application.yml should look like this:\n"
+echo -e "---\ndevelopment:\n  RAILS_SECRET: \"XXX\"\n  REDIS_URL: \"http://localhost:6379/0\"\ntest:\n  RAILS_SECRET: \"XXX\""
+echo -e "\nReplace XXX with this:"
+rake secret

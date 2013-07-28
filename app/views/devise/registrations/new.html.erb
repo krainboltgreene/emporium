@@ -1,0 +1,14 @@
+<%= simple_form_for resource, form_options(registration_path(resource_name)) do |f| %>
+  <legend><h1>Sign Up</h1></legend>
+  <%= devise_error_messages! %>
+
+  <%= f.input :email, autofocus: true, placeholder: "jpublic@example.com" %>
+  <%= f.input :username, placeholder: "jpublic" %>
+  <%= f.input :password, placeholder: "••••••••••" %>
+  <%= f.input :password_confirmation, label: "&nbsp;", placeholder: "••••••••••", hint: "Just to make sure your password is right" %>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up", class: "btn-primary" %>
+  </div>
+  <%= render "devise/shared/links" %>
+<% end %>
