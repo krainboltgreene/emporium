@@ -31,6 +31,10 @@ module ApplicationHelper
     true
   end
 
+  def view_full?
+    @view_full
+  end
+
   def thumbs(state)
     icon_tag("thumbs-#{state}")
   end
