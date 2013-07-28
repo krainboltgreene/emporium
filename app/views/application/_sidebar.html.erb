@@ -1,0 +1,37 @@
+<ul class="nav nav-list well">
+  <% unless @updated_mods.blank? %>
+    <li class="nav-header">Updated Mods</li>
+    <%= render partial: "sidebar_downloadable", collection: @updated_mods %>
+  <% end %>
+
+  <% unless @newest_mods.blank? %>
+    <li class="divider"></li>
+    <li class="nav-header">Newest Mods</li>
+    <%= render partial: "sidebar_downloadable", collection: @newest_mods %>
+  <% end %>
+
+  <% unless @updated_crafts.blank? %>
+    <li class="divider"></li>
+    <li class="nav-header">Updated Crafts</li>
+    <%= render partial: "sidebar_downloadable", collection: @updated_crafts %>
+  <% end %>
+
+  <% unless @newest_crafts.blank? %>
+    <li class="divider"></li>
+    <li class="nav-header">Newest Mods</li>
+    <%= render partial: "sidebar_downloadable", collection: @newest_crafts %>
+  <% end %>
+
+  <% if account_signed_in? %>
+    <% if current_account.downloadables.any? %>
+      <li class="divider"></li>
+      <%= render partial: "sidebar_account"  %>
+    <% end %>
+    <li>
+      <div class="pull-center">
+        <%= button_to buttoner("upload", "Upload Mod"), new_mod_path, class: "btn-block" %>
+        <%= button_to buttoner("upload", "Upload Craft"), new_craft_path, class: "btn-block" %>
+      </div>
+    </li>
+  <% end %>
+</ul>

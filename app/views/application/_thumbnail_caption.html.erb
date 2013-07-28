@@ -1,0 +1,17 @@
+<div class="caption">
+  <h3 style="text-align: center">
+    <%= link_to thumbnail_caption.name, thumbnail_caption %>
+  </h3>
+  <p><%= thumbnail_caption.short(150) %></p>
+  <div class="pull-center">
+    <div class="btn-group">
+      <%= button_to icon_tag("download") + " Download", thumbnail_caption.url(:download), class: "btn-primary" %>
+      <% if account_signed_in? %>
+        <%= button_to icon_tag("thumbs-up"), thumbnail_caption.url(:like), tooltip("Like").merge(class: thumbnail_caption.liked_style) %>
+        <%= button_to icon_tag("bookmark"), thumbnail_caption.url(:bookmark), tooltip("Bookmark").merge(class: thumbnail_caption.bookmarked_style) %>
+        <%= button_to icon_tag("flag"), thumbnail_caption.url(:report), tooltip("Report") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

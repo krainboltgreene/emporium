@@ -1,16 +1,28 @@
 <header>
-  <nav class="navbar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-      <a class="brand" href="/">Shadowlands</a>
-      <ul class="nav">
-        <li><%= link_to "Account", "#" %></li>
-      </ul>
-      <ul class="nav pull-left">
-        <% unless account_signed_in? %>
-          <li><%= link_to "Sign Up", new_account_registration_path %></li>
-          <li><%= link_to "Sign In", new_account_session_path %></li>
-        <% end %>
-      </ul>
+      <div class="container">
+        <a class="brand" href="/">Shadowlands</a>
+        <ul class="nav pull-left">
+          <%= item :li, false do %>
+            <%= link_to "Mods", "#" %>
+          <% end %>
+          <%= item :li, false do %>
+            <%= link_to "Crafts", "#" %>
+          <% end %>
+          <%= item :li, false do %>
+            <%= link_to "Parts", "#" %>
+          <% end %>
+          <%= item :li, false do %>
+            <%= link_to "Packs", "#" %>
+          <% end %>
+        </ul>
+        <ul class="nav pull-right">
+          <%= render partial: "header_search" %>
+          <%= render partial: "header_authentication" %>
+        </ul>
+      </div>
     </div>
   </nav>
+  <%= render partial: "notifications" if notice || alert %>
 </header>
