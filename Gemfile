@@ -49,6 +49,8 @@ gem "redis-rack", github: "jodosha/redis-store"
 gem "carrierwave", "~> 0.6"
 gem "omniauth", "~> 1.1"
 gem "tire", "~> 0.6"
+gem "gutentag", "~> 0.2"
+
 group :production, :staging do
   gem "rails_12factor", "~> 0.0.2"
 end
@@ -74,4 +76,6 @@ group :development do
   gem "vendorer", "~> 0.1", require: false
   gem "annotate", "~> 2.5"
   gem "guard", "~> 1.8"
+  gem "guard-rspec", "~> 3.0"
+  gem "guard-spork", "~> 1.5"
 end
