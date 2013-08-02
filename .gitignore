@@ -10,7 +10,6 @@
 # Ignore all bundler caching
 /vendor/cache
 /vendor/ruby
-/vendor/assets
 
 # Ignore the default SQLite database.
 /db/*.sqlite3*

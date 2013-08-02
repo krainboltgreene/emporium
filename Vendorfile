@@ -24,6 +24,7 @@ folder "vendor/assets" do
   tagmanagercss = "https://raw.github.com/max-favilli/tagmanager/master/bootstrap-tagmanager.css"
   folder "stylesheets" do
     file "chosen.css", chosencss
+    file "tagmanager.css", tagmanagercss
     folder "bootstrap" do
       file "lightbox.css", lightboxcss
     end
