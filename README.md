@@ -1,5 +1,23 @@
 Emporium
 --------
 
-  - [ ![Codeship Status](https://www.codeship.io/projects/8eb687d0-99b7-0130-ada7-12438a67fbc9/status?branch=master)](https://www.codeship.io/projects/3247)
-  - [![Code Climate](https://codeclimate.com/github/krainboltgreene/emporium.png)](https://codeclimate.com/github/krainboltgreene/emporium)
+Description of the project
+
+
+Setup
+-----
+
+  * [General Setup](/wiki/general-setup)
+  * [Heroku Setup](/wiki/heroku-setup)
+
+
+Contributing
+------------
+
+Grab the discourse contributing bit
+
+
+License
+-------
+
+Grab the discourse license bit
