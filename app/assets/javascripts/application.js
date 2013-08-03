@@ -27,3 +27,9 @@ $(function() {
   $("[data-toggle=tooltip]").tooltip();
 
   $(".chzn-select").chosen();
+
+  $("#tag_names").tagsManager({
+    prefilled: $("#tag_names").val(),
+    hiddenTagListName: "downloadable[tags]"
+  });
+});
