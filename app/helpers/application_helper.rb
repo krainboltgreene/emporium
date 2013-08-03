@@ -62,4 +62,25 @@ module ApplicationHelper
   def dismiss(type)
     { dismiss: type }
   end
+
+  def form_options(url = nil, as = resource_name)
+    {
+      as: as,
+      url: url,
+      html: {
+        class: "form-horizontal"
+      }
+    }
+  end
+
+  def puts_form_options(url = nil, as = resource_name)
+    {
+      as: as,
+      url: url,
+      html: {
+        method: :puts,
+        class: "form-horizontal"
+      }
+    }
+  end
 end
