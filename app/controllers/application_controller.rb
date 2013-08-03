@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   end
 
   def current_account
-    AccountDecorator.decorate(super)
+    AccountDecorator.decorate(super) if super
   end
 end
